@@ -1,0 +1,36 @@
+{
+  "name": "my_covet",
+  "version": "1.0.0",
+  "description": "learning react",
+  "main": "first.js",
+  "scripts": {
+    "start": "parcel toggle.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tharun-05/proj.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tharun-05/proj/issues"
+  },
+  "homepage": "https://github.com/Tharun-05/proj#readme",
+  "devDependencies": {
+    "parcel": "^2.11.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "create-react-app": "^1.2.1",
+    "express": "^3.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.2.1",
+    "nodemon": "^3.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.2"
+  }
+}
