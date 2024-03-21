@@ -2,7 +2,10 @@ const mongoose=require("mongoose");
 // const {Schema}=mongoose;
 const RestaurentSchema=mongoose.Schema({
     name:String,
-    cusiens:String,
+    cuisines:Array,
+    locality:String,
+    areaName:String,
+    costForTwo:String,
     time:String,
     Rating:String,
     ImageUrl:String,
