@@ -2,7 +2,9 @@ const mongoose=require("mongoose");
 // const {Schema}=mongoose;
 const RestaurentSchema=mongoose.Schema({
     name:String,
-    cuisines:[String],
+    cuisines:{
+        type:Array,
+    },
     locality:String,
     areaName:String,
     costForTwo:String,
