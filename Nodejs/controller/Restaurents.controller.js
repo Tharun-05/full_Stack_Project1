@@ -1,8 +1,8 @@
 const restaurentModel = require("../Models/Restaurents.model");
 
 exports.create=(req,res)=>{
-    const {name,cuisines,locality,areaName,costForTwo,time,Rateng,ImageUrl}=req.body;
-    const newRestaurent=new restaurentModel({name,cuisines,locality,areaName,costForTwo,time,Rateng,ImageUrl});
+    const {name,cuisines,locality,areaName,costForTwo,time,Rating,ImageUrl}=req.body;
+    const newRestaurent=new restaurentModel({name,cuisines,locality,areaName,costForTwo,time,Rating,ImageUrl});
     newRestaurent.save().then(data=>{
       if(!data){
           res.status(400).json({"message":"Data not found"});
