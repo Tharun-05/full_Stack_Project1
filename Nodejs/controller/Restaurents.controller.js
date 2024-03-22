@@ -17,7 +17,6 @@ exports.fetch=(req,res)=>{
       if(!data){
           res.status(400).json({"message":"Data not found"});
       }
-      console.log(data.cuisiens[0]);
       res.send(data);
     }).catch(err=>{
       res.status(500).json({"message":"Server not found"});
