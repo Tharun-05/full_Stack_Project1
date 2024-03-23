@@ -5,7 +5,7 @@ import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnline from "../../useful/useOnline";
 function filterData(searchText,arrDetails){
-    return arrDetails.filter(res=>res.name.toLowerCase().includes(searchText.toLowerCase())||res.cusiens.toLowerCase().includes(searchText.toLowerCase()));
+    return arrDetails.filter(res=>res.name.toLowerCase().includes(searchText.toLowerCase())||res.cuisines[0].toLowerCase().includes(searchText.toLowerCase()));
 }
 const Body=()=>{
     const[searchText,setSearchText]=useState("");
@@ -27,7 +27,7 @@ if(!isOnline){
     return allrestaurent.length===0?<Shimmer/>:(<>
     <div className="navBar">
         <div className="SearchBar">
-           <input type="search" onChange={(e)=>setSearchText(e.target.value) }  value={searchText} placeholder="Search for dishes" className="search" size={50}></input>
+           <input type="search" onChange={(e)=>setSearchText(e.target.value) }  value={searchText} placeholder="Search for Restaurants/dishes" className="search" size={50}></input>
            <button onClick={()=>{
             const data=filterData(searchText,arrDetails);
             setAllRestaurent(data);
@@ -39,27 +39,15 @@ if(!isOnline){
                 allrestaurent.map((rest)=> {
                     
                     return(
-                    <Link to={"Restaurents/"+rest.name+"/"+rest.id}>
+                    <Link to={"/Restaurents/"+rest.name+"/"+rest.id}>
                     <Containers key={rest.id} details={rest}/>
                     </Link>
                     )
                      
                 })
-               
                 // arrDetails.forEach(rest=> <Containers details={rest}/>)
             }
-            {/* <Containers details={arrDetails[0]} />
-            <Containers details={arrDetails[1]} />
-            <Containers details={arrDetails[2]}/>
-            <Containers details={arrDetails[3]}/> */}
-            {/* <Containers/>
-            <Containers/>
-            <Containers/>
-            <Containers/>
-            <Containers/>
-            <Containers/> } */}
-        </div>
-            
+        </div>   
     </div>
     </>)
 }

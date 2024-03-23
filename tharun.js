@@ -68,11 +68,15 @@ const appRouter=createBrowserRouter([
                     },
                     {
                         path:"/Restaurents",
-                        element:<Restaurents/>,
+                        element:<Body/>,
+                        children:[
+                            {path:"restaurent/Restaurents/:name/:id",
+                            element:<RestaurentManu/>}
+                        ]
                         },
                         {
                             path:"/",
-                            element:<Body/>
+                            element:<Restaurents/>
                         }  ,
                         {
                             path:"/Restaurents/:name/:id",

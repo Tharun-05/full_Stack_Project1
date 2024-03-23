@@ -8,6 +8,7 @@ const RestaurentSchema=mongoose.Schema({
     costForTwo:String,
     time:String,
     Rating:String,
+    ItemUrl:String,
     ImageUrl:String,
 });
 const restaurentModel=mongoose.model("Restaurent",RestaurentSchema);
