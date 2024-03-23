@@ -6,7 +6,6 @@ export const Home=(props)=>{
         <img src={itemurl}></img>
         <div className="child1">
             <h2 className="cusiens">{cuisineToShow+" "}</h2>
-        
         </div>
         
     </div>

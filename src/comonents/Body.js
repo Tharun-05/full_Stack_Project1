@@ -15,8 +15,13 @@ getRestaurents();
  },[]);
 async function getRestaurents(){
     setTimeout(()=>{
-        const data=arrDetails;
-        setAllRestaurent(data);
+        // const data=arrDetails;
+        fetch("https://full-stack-project1-1.onrender.com/api/restaurent/").then((res)=>{
+            res.json()
+        }).then((restaurants)=>{
+            setAllRestaurent(data);
+        }).catch((err)=>console.log(err));
+        
     },100
     )
 }
