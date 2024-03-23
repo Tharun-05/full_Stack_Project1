@@ -3,8 +3,11 @@ const app=express();
 const bodyParser=require("body-parser");
 const mongoose=require("mongoose");
 const dbConfig=require("./Config/db.config");
+const cors=require("cors");
 const path=require("path");
 app.use(bodyParser.json())
+app.use(cors())
+
 app.listen(5000, () => {
     console.log("Server is running on port 5000");
 });

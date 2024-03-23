@@ -4,6 +4,7 @@ import { useState,useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnline from "../../useful/useOnline";
+
 function filterData(searchText,arrDetails){
     return arrDetails.filter(res=>res.name.toLowerCase().includes(searchText.toLowerCase())||res.cuisines[0].toLowerCase().includes(searchText.toLowerCase()));
 }
