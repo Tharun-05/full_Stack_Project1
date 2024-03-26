@@ -10,6 +10,8 @@ const RestaurentSchema=mongoose.Schema({
     Rating:String,
     ItemUrl:String,
     ImageUrl:String,
+    latitude:String,
+    longitude:String,
 });
 const restaurentModel=mongoose.model("Restaurent",RestaurentSchema);
 module.exports=restaurentModel;

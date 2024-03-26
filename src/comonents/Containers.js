@@ -1,9 +1,9 @@
 export const Containers=(props)=>{
-    const {name,cuisines,url,Rating,time}=props.details;
+    const {name,cuisines,locality,areaName,costForTwo,ImageUrl,Rating,time}=props.details;
     const cuisineToShow = cuisines && cuisines.length > 0 ? cuisines[0] : "";
     return(<>
     <div className="parent">
-        <img src={url}></img>
+        <img src={ImageUrl}></img>
         <div className="parent1">
         <div className="child1">
             <h2>{name}</h2>

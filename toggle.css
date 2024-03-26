@@ -76,8 +76,35 @@ html,body{
     width: 300px;
     height: 200px;
 }
+.aboutrest{
+    width:900px;
+    height:400px;
+    font-size:x-large;
+}
+.aboutrest p{
+    margin-top: 10%;
+}
+.MenuCuisines h1{
+    align-self:center;
+}
+.restaurantPage{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.restaurantPage img{
+    width: 100%;
+}
+.login-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 .MenuCuisines{
     font-size: xx-large;
+    background-color:black;
+    color: aliceblue;
 }
 .header{
     background-color:rgb(129, 101, 64);
@@ -165,6 +192,9 @@ li :hover{
     ul{
         display: none;
         margin-left: 0px;
+    }.MenuCuisines{
+        font-size: xx-large;
+        padding-top:15% ;
     }
     .active{
         display: flex;

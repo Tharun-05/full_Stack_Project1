@@ -20,7 +20,7 @@
 
 
 // }
-import  React,{lazy,Suspense} from "react"
+import  React,{lazy,Suspense, useState} from "react"
 import  ReactDOM  from "react-dom/client";
 import Header from "./src/comonents/Header";
 import Body from "./src/comonents/Body";
@@ -31,6 +31,7 @@ import { createBrowserRouter,Outlet,RouterProvider } from "react-router-dom";
 import Restaurents from "./src/comonents/Restaurents";
 import Restaurents from "./src/comonents/Restaurents";
 import RestaurentManu from "./src/comonents/RestaurentMenu";
+import Login from "./src/comonents/Login";
 // const divelement=React.createElement('div',{id:'child'},
 // [React.createElement('h1',{id:'header'},"hello world"),React.createElement('h1',{},"hello world")]);
 
@@ -42,7 +43,11 @@ import RestaurentManu from "./src/comonents/RestaurentMenu";
 // console.log(addfun);
 
 const App=()=>{
-    return( <>
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  return !isLoggedIn ? (
+    <Login IsLoggedInMethod={setIsLoggedIn} />
+  ):( <>
     <div className="App">
     <Header/>
     <Outlet/>

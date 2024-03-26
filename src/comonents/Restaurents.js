@@ -1,4 +1,4 @@
-// import { Containers } from "./Containers";
+import { Containers } from "./Containers";
 import { Home } from "./home";
 import { arrDetails } from "../../useful/Detailsarr";
 import { useState,useEffect } from "react";
@@ -17,15 +17,17 @@ function filterData(searchText, arrDetails) {
 const Restaurents=()=>{
     const[searchText,setSearchText]=useState("");
     const[allrestaurent,setAllRestaurent]=useState([]);
+    const [filteredRestaurents,setfilteredRestaurents]=useState([]);
  useEffect(()=>{
 getRestaurents();
  },[]);
 async function getRestaurents(){
-    setTimeout(()=>{
-        const data=arrDetails;
-        setAllRestaurent(data);
-    },100
-    )
+    fetch("https://full-stack-project1-1.onrender.com/api/restaurent/").then((res)=>res.json()
+        ).then((restaurants)=>{
+            // setAllRestaurent(restaurants);
+            setAllRestaurent(restaurants);
+        setfilteredRestaurents(restaurants);
+        }).catch((err)=>console.log(err));
 }
 const isOnline=useOnline();
 if(!isOnline){
@@ -36,18 +38,18 @@ return allrestaurent.length===0?<Shimmer/>:(<>
         <div className="SearchBar">
            <input type="search" onChange={(e)=>setSearchText(e.target.value) }  value={searchText} placeholder="Search for dishes" className="search" size={50}></input>
            <button onClick={()=>{
-            const data=filterData(searchText,arrDetails);
-            setAllRestaurent(data);
+            const data=filterData(searchText,allrestaurent);
+            setfilteredRestaurents(data);
            }}>Search</button>
         </div> 
         <div className="container">
             {
                 
-                allrestaurent.map((rest)=> {
+                filteredRestaurents.map((rest)=> {
                     
                     return(
-                    <Link to={"/Restaurents/"+rest.name+"/"+rest.id}>
-                    <Home key={rest.id} details={rest}/>
+                    <Link to={"/Restaurents/"+rest.name+"/"+rest._id}>
+                    <Home key={rest._id} details={rest}/>
                     </Link>
                     )
                      
