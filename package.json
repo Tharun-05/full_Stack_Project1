@@ -2,7 +2,6 @@
   "name": "my_covet",
   "version": "1.0.0",
   "description": "learning react",
-  "main": "first.html",
   "scripts": {
     "start": "parcel toggle.html",
     "test": "jest"
