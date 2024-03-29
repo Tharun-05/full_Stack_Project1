@@ -41,13 +41,13 @@ const RestaurentManu=()=>{
                     Whether you're craving classic comfort food or adventurous global flavors, we have something to satisfy every palate. 
                     Our commitment to excellence extends beyond the kitchen, as our attentive staff ensures every guest feels welcomed and well 
                     taken care of. Join us for a meal to remember, where great food and exceptional service come together to create memories that 
-                    linger long after the last bite.
-                </p>
-                {mapsLink && (
+                    linger long after the last bite.{mapsLink && (
                     <p>
                         <a href={mapsLink} target="_blank" rel="noopener noreferrer">View on Google Maps</a>
                     </p>
                 )}
+                </p>
+                
             </div>
         </div>
         

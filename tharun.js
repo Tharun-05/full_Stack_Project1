@@ -32,6 +32,7 @@ import Restaurents from "./src/comonents/Restaurents";
 import Restaurents from "./src/comonents/Restaurents";
 import RestaurentManu from "./src/comonents/RestaurentMenu";
 import Login from "./src/comonents/Login";
+import Register from "./src/comonents/Register";
 // const divelement=React.createElement('div',{id:'child'},
 // [React.createElement('h1',{id:'header'},"hello world"),React.createElement('h1',{},"hello world")]);
 
@@ -46,6 +47,7 @@ const App=()=>{
     const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return !isLoggedIn ? (
+    // <Register/>
     <Login IsLoggedInMethod={setIsLoggedIn} />
   ):( <>
     <div className="App">

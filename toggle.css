@@ -5,10 +5,10 @@
 }
 .child1{
     /* overflow:auto; */
-    font-size: 90%;
+    font-size: 80%;
 }
 .child2{
-    font-size: 100%;
+    /* font-size: 100%; */
 }
 .SearchBar{
 margin: 10px;
@@ -60,13 +60,15 @@ html,body{
 }
 .Homeparent{
     width: 300px;
-    height: 300px;
+    height: 200px;
     border: 1px solid black;
     margin: 10px;
+    border-radius: 50%;
 }
 .Homeparent img{
     width: 300px;
     height: 200px;
+    border-radius: 50%;
 }
 .cuisines {
     text-decoration: none;
@@ -100,6 +102,33 @@ html,body{
     justify-content: center;
     align-items: center;
     height: 100vh;
+}
+.register-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+form{
+    background-color: black;
+    color: white;
+   text-align: center;
+   padding:  1% 5%;
+   font-size: xx-large;
+}
+input{
+    margin: 1%;
+    padding: 2%;
+    font-size: large;
+}
+.login-form button{
+    font-size: large;
+}
+.register-form button{
+    font-size: large;
+}
+form h1{
+    color: pink;
 }
 .MenuCuisines{
     font-size: xx-large;
@@ -165,18 +194,18 @@ li :hover{
     border: none;
     margin: 10px;
 }
-@media(max-width: 970px){
-    .toggle{
+@media(max-width: 900px){
+    .toggle {
+        display: flex; /* Show the toggle button */
         width: 30px;
-        height:25px ;
+        height: 25px;
         margin-top: 20px;
         margin-right: 40px;
-        display: flex;
         flex-direction: column;
         justify-content: space-between;
         background-color: white;
+        cursor: pointer; /* Change cursor to pointer */
     }
-
     .child1,.child2{
         /* overflow:auto; */
         font-size: 70%;
@@ -184,7 +213,7 @@ li :hover{
     .header img{
         width:30%;
     }
-    .line1,.line2,.line3{
+    .line1, .line2, .line3 {
         background-color: black;
         width: 30px;
         height: 3px;
@@ -194,19 +223,25 @@ li :hover{
         margin-left: 0px;
     }.MenuCuisines{
         font-size: xx-large;
-        padding-top:15% ;
+        margin-top: 30vh;
     }
-    .active{
+    .active {
         display: flex;
         position: absolute;
         flex-direction: column;
         z-index: 1;
         margin-top: 0%;
-        margin-left: 1%;;
+        margin-left: 1%;
         background-color: aliceblue;
     }
-    .active li{
+    .active li {
         padding: 15px;
+    }
+}
+@media(max-width: 400px){
+    .MenuCuisines{
+        font-size: xx-large;
+        margin-top: 50vh;
     }
 }
 @media(max-width: 400px){
